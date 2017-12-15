@@ -1,14 +1,8 @@
 {
     "name": "tieba-crawler",
-    "version": "1.0.1",
+    "version": "1.0.7",
     "description": "nodejs to crawler tieba",
     "main": "index.js",
-    "directories": {
-        "lib": "lib"
-    },
-    "bin": {
-        "pc": "./bin/pc.js"
-    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -19,8 +13,7 @@
     "keywords": [
         "node",
         "crawler",
-        "tieba",
-        "javascript"
+        "tieba"
     ],
     "author": "itagn",
     "license": "MIT",
@@ -29,7 +22,6 @@
     },
     "homepage": "https://github.com/itagn/NodeCrawle#readme",
     "dependencies": {
-        "commander": "^2.11.0",
         "request": "^2.83.0",
         "cheerio": "^0.22.0"
     }

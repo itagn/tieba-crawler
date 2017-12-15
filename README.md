@@ -10,36 +10,73 @@
     
 	npm install tieba-crawler
 
-### 例子
+### 操作
+
+    创建test.js，内容如下，然后执行node test.js
+
 ```javascript
 下载单页某帖子的数据
 
-方法1
-	npm install tieba-crawler
-	npm install
-	node ./bin/pc s
-方法2
-	npm install tieba-crawler
-	npm install
-	node ./bin/pc sample
+const { fetchPage } = require('tieba-crawler');
+const url = '';  //  你想要爬取的贴子网址
+fetchPage(url, 'simple');
 
 下载某贴吧首页的所有帖子的数据
 
-方法1
-	npm install tieba-crawler
-	npm install
-	node ./bin/pc f
-方法2
-	npm install tieba-crawler
-	npm install
-	node ./bin/pc first
+const { fetchPage } = require('tieba-crawler');
+const url = '';  //  你想要爬取的贴吧首页
+fetchPage(url, 'first');
 ```
 
-## 文件说明
+### 新操作
 
-    main.js: 爬虫主程序，爬取贴吧首页的帖子名和帖子链接
-    tieba.js: 爬虫支线，根据之前爬取到的每个帖子名爬取每个帖子的每层楼评论（文字加图片），每层楼用户id和头像
-    tool.js: 爬虫支持，提供了爬虫保存到本地文件的方法，还有http协议与https协议
+    创建test.js，内容如下，然后执行node test s/simple/f/first (方式选一种，如 node test s)
+
+```javascript
+#!/usr/bin/env node
+
+const program = require('commander');
+const { fetchPage } = require('tieba-crawler');
+
+program
+.command('simple')
+.description('crawler files from tieba')
+.alias('s')
+.action(function(type, name){
+    process.stdout.write('输入网址：');
+	process.stdin.on('data', function (chunk) {
+        let url = String(chunk);
+        process.stdin.end();
+        fetchPage(url, 'simple');
+    });
+});
+
+program
+.command('first')
+.description('crawler files from tieba')
+.alias('f')
+.action(function(type, name){
+    process.stdout.write('输入贴吧首页：');
+	process.stdin.on('data', function (chunk) {
+        let url = String(chunk);
+        process.stdin.end();
+        fetchPage(url, 'first');
+    });
+});
+
+program.parse(process.argv);
+```
+
+## 函数说明
+
+    这里提供了fetchPage函数，fetchPage(url, method, msg, page)。
+    url: 爬虫地址，需要带上协议名，完整的url
+    method：爬虫方式，'simple'和'first'，默认为'simple'
+    第一个为选择贴吧单页方式，第二个为选择贴吧首页方式
+    msg: 初始消息，默认为 ''
+    page: 帖子爬取的初始页，默认为 1
+
+    最后两个参数可以不用设置
 
 作者：微博 [@itagn][1] - Github [@itagn][2] 
 
