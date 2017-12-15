@@ -12,6 +12,8 @@ function tieba (addr, res, tiebaMsg='', tiebaPage=1){
         const $ = cheerio.load(html);  // 采用cheerio 模块解析html
         const tiebaName = $('.card_title .card_title_fname').eq(0).text() || $('.plat_title_h3').eq(0).text() || $('#tb_nav .multi_forum_link').eq(1).text();
         if(tiebaName === ''){
+            console.log('找不到页面，404');
+        }else{
             const page = $('.l_reply_num .red').eq(1).text().trim();
             let tiezi = $('.core_title_wrap_bright .core_title_txt').eq(0).text().trim() || 'undefined', tieziName = null;
             if(tiezi !== undefined){
@@ -48,8 +50,6 @@ function tieba (addr, res, tiebaMsg='', tiebaPage=1){
                     fetchPage(nextUrl, tieba, tiebaMsg, tiebaPage);
                 }
             }
-        }else{
-            console.log('找不到页面，404');
         }
     }).on('error', function() {
         console.log('error');
