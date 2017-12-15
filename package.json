@@ -1,6 +1,6 @@
 {
-    "name": "NodeCrawle",
-    "version": "1.0.0",
+    "name": "tieba-crawler",
+    "version": "1.0.1",
     "description": "nodejs to crawler tieba",
     "main": "index.js",
     "directories": {
@@ -29,7 +29,6 @@
     },
     "homepage": "https://github.com/itagn/NodeCrawle#readme",
     "dependencies": {
-        "tieba-crawler": "^1.0.0",
         "commander": "^2.11.0",
         "request": "^2.83.0",
         "cheerio": "^0.22.0"
