@@ -72,7 +72,7 @@ function saveHead($ , imgDir){
     });
 };
 //  文件夹不存在，则创建
-function dir(path){
+function mdir(path){
     if (!fs.existsSync(path)) {
         fs.mkdirSync(path);
     }
@@ -82,7 +82,7 @@ function currName(name){
     if( typeof name !== 'undefined'){
         return name.replace(/\//g, 'i').replace(/\\/g, 'i').replace(/\:/g, 'i')
         .replace(/\*/g, 'i').replace(/\?/g, 'i').replace(/\</g, 'i').replace(/\>/g, 'i')
-        .replace(/\"/g, 'i').replace(/\|/g, 'i');
+        .replace(/\"/g, 'i').replace(/\|/g, 'i').trim();
     }else{
         return 'undefined';
     }

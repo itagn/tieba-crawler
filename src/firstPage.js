@@ -10,7 +10,7 @@ function firstPage(addr, res, txtMsg='', tiebaPage=1){
     });
     res.on('end' , function(){
         const $ = cheerio.load(html),  // 采用cheerio 模块解析html
-              tiebaName = $('.card_title_fname ').eq(0).text().trim(),
+              tiebaName = $('.card_title_fname').eq(0).text().trim(),
               authors =  $('.tb_icon_author');
         let author =  [];
         for(let i=0;i<authors.length;i++){
@@ -29,7 +29,7 @@ function firstPage(addr, res, txtMsg='', tiebaPage=1){
         const txt = `${currName(tiebaName)}.txt`;
     
         mdir(data);
-        saveTxt(allMsg, data, txt);
+        saveTxt(txtMsg, data, txt);
     }).on('error', function() {
         console.log('error');
     });
