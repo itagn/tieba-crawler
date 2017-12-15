@@ -22,8 +22,7 @@ function tieba (addr, res, tiebaMsg='', tiebaPage=1){
             }else{
                 tieziName = 'undefined';
             }
-            tiebaName = tiebaName || 'undefined';
-            if(tieziName !== 'undefined' && tiebaName !== 'undefined'){
+            if(tieziName !== 'undefined' && tiebaName){
                 if(tiebaPage === 1){
                     tiebaMsg = `标题：${currName(tieziName)}  链接：${addr.split('?')[0]}`;
                 }
