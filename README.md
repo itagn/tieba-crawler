@@ -6,11 +6,34 @@
     createdOn: 2017/5/28
 
 ## 操作说明 
-#### 配置环境，安装node，官网下载 [node](https://nodejs.org/en/)
+### 配置环境，安装node，官网下载 [node](https://nodejs.org/en/)
     
     1.安装环境需要的npm包，打开cmd执行
         npm install
-    2.运行主程序 node .bin/pc (s/simple/f/first)
+    2.运行主程序 node ./bin/pc (s/simple/f/first)
+
+### 例子
+```javascript
+下载单页某帖子的数据
+方法1
+	git clone https://github.com/itagn/NodeCrawler.git
+	npm install
+	node ./bin/pc s
+方法2
+	git clone https://github.com/itagn/NodeCrawler.git
+	npm install
+	node ./bin/pc sample
+下载某贴吧首页的所有帖子的数据
+
+方法1
+	git clone https://github.com/itagn/NodeCrawler.git
+	npm install
+	node ./bin/pc f
+方法2
+	git clone https://github.com/itagn/NodeCrawler.git
+	npm install
+	node ./bin/pc first
+```
 
 ## 文件说明
 

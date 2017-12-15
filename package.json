@@ -29,6 +29,7 @@
     },
     "homepage": "https://github.com/itagn/NodeCrawle#readme",
     "dependencies": {
+        "tieba-crawler": "^1.0.0",
         "commander": "^2.11.0",
         "request": "^2.83.0",
         "cheerio": "^0.22.0"
