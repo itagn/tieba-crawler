@@ -9,8 +9,8 @@
 #### 配置环境，安装node，官网下载 [node](https://nodejs.org/en/)
     
     1.安装环境需要的npm包，打开cmd执行
-        npm install request && npm install cheerio
-    2.运行主程序 node main.js
+        npm install
+    2.运行主程序 node .bin/pc (s/simple/f/first)
 
 ## 文件说明
 

@@ -17,7 +17,6 @@ program
     process.stdout.write('输入网址：');
 	process.stdin.on('data', function (chunk) {
         let url = String(chunk);
-        process.stdout.write(url);
         process.stdin.end();
         fetchPage(url, tieba, '', 1)
     });
@@ -31,7 +30,6 @@ program
     process.stdout.write('输入贴吧首页：');
 	process.stdin.on('data', function (chunk) {
         let url = String(chunk);
-        process.stdout.write(url);
         process.stdin.end();
         fetchPage(url, firstPage, '', 1)
     });

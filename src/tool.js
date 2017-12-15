@@ -1,23 +1,32 @@
 //  nodejs爬虫 贴吧 程序，蔡东-UESTC-2017-11-9
 const fs = require('fs'), request = require('request'), https = require('https'), http = require('http');
-
 //  判断是http协议还是https协议
 function fetchPage(url, func, txtMsg, tiebaPage){
-    const web = url.split("://")[0];
-    if(web === 'http'){
-        // 采用http模块向服务器发送一次get请求
-        http.get(url , function(res){
-            func(url, res, txtMsg, tiebaPage);
-        });
-    }else if(web === 'https'){
-        // 采用https模块向服务器发送一次get请求
-        https.get(url , function(res){
-            func(url, res, txtMsg, tiebaPage);
-        });
+    const urlArr = url.split("://");
+    if(urlArr.length>1){
+        const web = urlArr[0];
+        const dom = urlArr[1].split('/');
+        if(dom[0] === 'tieba.baidu.com' && dom.length>1){
+            if(web === 'http'){
+                // 采用http模块向服务器发送一次get请求
+                http.get(url , function(res){
+                    func(url, res, txtMsg, tiebaPage);
+                });
+            }else if(web === 'https'){
+                // 采用https模块向服务器发送一次get请求
+                https.get(url , function(res){
+                    func(url, res, txtMsg, tiebaPage);
+                });
+            }else{
+                console.log('只支持http协议和https协议');
+            }
+        }else{
+            console.log('只支持在贴吧爬虫');
+        }
     }else{
-        console.log('only support http and https protocol');
+        console.log('请输入完整的网址，包括协议');
     }
-};
+}
 //  文件保存函数
 function saveTxt(allMsg, txtdir, txt){
     //  文件目录和地址
@@ -31,7 +40,7 @@ console.log(`---------------文件写入${txt}完成---------------`);
     writerStream.on('error' , function(error){
         console.log(error.stack);
     });
-};
+}
 //  图片保存函数
 function saveImage($ , imgDir){
     //  获取图片
@@ -51,7 +60,7 @@ function saveImage($ , imgDir){
             writeStream.end();
         });
     });
-};
+}
 //  图片保存用户头像
 function saveHead($ , imgDir){
     $('.p_author_face img').each(function () {
@@ -70,13 +79,13 @@ function saveHead($ , imgDir){
             writeStream.end()
         });
     });
-};
+}
 //  文件夹不存在，则创建
 function mdir(path){
     if (!fs.existsSync(path)) {
         fs.mkdirSync(path);
     }
-};
+}
 //  由于文件夹和文件有命名规定，所以需要更改
 function currName(name){
     if( typeof name !== 'undefined'){
@@ -86,7 +95,7 @@ function currName(name){
     }else{
         return 'undefined';
     }
-};
+}
 
 //  导出模块
 module.exports = {
@@ -96,4 +105,4 @@ module.exports = {
     saveHead:saveHead,
     mdir: mdir,
     currName: currName
-}
+};
