@@ -15,6 +15,7 @@
 ### 例子
 ```javascript
 下载单页某帖子的数据
+
 方法1
 	git clone https://github.com/itagn/NodeCrawler.git
 	npm install
@@ -23,6 +24,7 @@
 	git clone https://github.com/itagn/NodeCrawler.git
 	npm install
 	node ./bin/pc sample
+
 下载某贴吧首页的所有帖子的数据
 
 方法1
