@@ -30,7 +30,8 @@ fetchPage(url, 'first');
 
 ### 新操作
 
-    创建test.js，内容如下，然后执行node test s/simple/f/first (方式选一种，如 node test s)
+    创建test.js，内容如下，然后执行npm install commander 
+    然后执行node test s/simple/f/first (方式选一种，如 node test s)
 
 ```javascript
 #!/usr/bin/env node

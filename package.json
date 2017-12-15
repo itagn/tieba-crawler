@@ -1,6 +1,6 @@
 {
     "name": "tieba-crawler",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "nodejs to crawler tieba",
     "main": "index.js",
     "scripts": {
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/itagn/NodeCrawle.git"
+        "url": "git+https://github.com/itagn/NodeCrawler.git"
     },
     "keywords": [
         "node",
@@ -18,9 +18,9 @@
     "author": "itagn",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/itagn/NodeCrawle/issues"
+        "url": "https://github.com/itagn/NodeCrawler/issues"
     },
-    "homepage": "https://github.com/itagn/NodeCrawle#readme",
+    "homepage": "https://github.com/itagn/NodeCrawler#readme",
     "dependencies": {
         "request": "^2.83.0",
         "cheerio": "^0.22.0"
