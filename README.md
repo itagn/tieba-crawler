@@ -99,7 +99,7 @@ program.parse(process.argv);
 
 ### 注意事项
 
-    使用版本1.0.8及之后的版本
+    使用版本1.1.1及之后的版本
 
     多次针对同一个网址爬虫可能会被图片的下载地址禁止，出现下载报错
 
@@ -115,7 +115,6 @@ program.parse(process.argv);
     这里提供了一个函数，参数为(url, method, msg, page)。
     url: 爬虫地址，需要带上协议名，完整的url
     method：爬虫方式，'simple'和'first'，默认为'simple'
-    第一个为选择贴吧单页方式，第二个为选择贴吧首页方式
     msg: 初始消息，默认为 ''
     page: 帖子爬取的初始页，默认为 1
 

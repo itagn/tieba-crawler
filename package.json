@@ -1,6 +1,6 @@
 {
     "name": "tieba-crawler",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "nodejs to crawler tieba",
     "main": "index.js",
     "scripts": {
