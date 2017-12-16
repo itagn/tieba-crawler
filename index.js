@@ -1,5 +1,3 @@
-const { fetchPage } = require('./lib/core.js');
+const core = require('./lib/core.js');
 
-module.exports = {
-    fetchPage: fetchPage
-}
+module.exports = core
