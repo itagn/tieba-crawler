@@ -1,16 +1,15 @@
 ﻿## tieba-crawler
+:rocket: 原生nodejs对百度贴吧实现爬虫
+
+    author: 蔡东
+    desc: 贴吧爬虫程序
+    createdOn: 2017/5/28
 
 <p align="center">
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/dm/tieba-crawler.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/v/tieba-crawler.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/l/tieba-crawler.svg" alt="License"></a>
 </p>
-
-:rocket: 原生nodejs对百度贴吧实现爬虫
-
-    author: 蔡东
-    desc: 贴吧爬虫程序
-    createdOn: 2017/5/28
 
 ## 操作说明 
 ### 配置环境，安装node，官网下载 [node](https://nodejs.org/en/)
