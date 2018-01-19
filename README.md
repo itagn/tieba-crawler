@@ -1,12 +1,11 @@
-﻿## tieba-crawler
-
-<p align="center">
+﻿<p align="center">
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/dm/tieba-crawler.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/v/tieba-crawler.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/l/tieba-crawler.svg" alt="License"></a>
 </p>
 ---
 
+## tieba-crawler
 :rocket: 原生nodejs对百度贴吧实现爬虫
 
     author: 蔡东
