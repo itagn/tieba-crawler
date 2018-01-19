@@ -1,4 +1,12 @@
-## tieba-crawler
+﻿## tieba-crawler
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/dm/tieba-crawler.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/v/tieba-crawler.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/l/tieba-crawler.svg" alt="License"></a>
+</p>
+---
+
 :rocket: 原生nodejs对百度贴吧实现爬虫
 
     author: 蔡东
@@ -124,3 +132,7 @@ program.parse(process.argv);
 
 [1]: https://weibo.com/p/1005053782707172
 [2]: https://github.com/itagn
+
+
+
+
