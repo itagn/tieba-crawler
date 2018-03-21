@@ -1,15 +1,12 @@
 ﻿## tieba-crawler
-:rocket: 原生nodejs对百度贴吧实现爬虫
-
-    author: 蔡东
-    desc: 贴吧爬虫程序
-    createdOn: 2017/5/28
-
-<p align="center">
+<p>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/dm/tieba-crawler.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/v/tieba-crawler.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/tieba-crawler"><img src="https://img.shields.io/npm/l/tieba-crawler.svg" alt="License"></a>
 </p>
+
+## 介绍  
+:rocket: 原生nodejs对百度贴吧实现爬虫  
 
 ## 操作说明 
 ### 配置环境，安装node，官网下载 [node](https://nodejs.org/en/)
@@ -102,19 +99,6 @@ program.parse(process.argv);
                 帖子名（内含帖子的详细信息）.txt
                 帖子的所有用户头像.JPG
                 帖子的所有回复图片.JPG
-
-### 注意事项
-
-    使用版本1.1.2及之后的版本
-
-    多次针对同一个网址爬虫可能会被图片的下载地址禁止，出现下载报错
-
-    由于作者是初步接触发布npm包，网上的教程不规范，
-    导致2017/12/15晚上发布的时候出现运行不了的情况，
-    最开始也没有写入口文件，所以在2017/12/15晚上更
-    新了很多版本，对于2017/12/15下载的各位抱歉，本版
-    本还存在很多bug和不足，希望大家可以提出。
-    支持npm社区。
 
 ## 函数说明
 

@@ -1,3 +1,4 @@
-const core = require('./lib/core.js');
-
-module.exports = core
+;(function(){
+    let core = require('./lib/core.js');
+    module.exports = core
+})();
